@@ -873,7 +873,7 @@ public class GUIOrg extends javax.swing.JFrame {
 
         for (int i = countDonor; i == countDonor; i++) {
             donor[i] = donorFactory.createDonor(donorFactoryType, txtDonorUmpStudID.getText(), txtDonorUmpStudName.getText(), gender, Integer.parseInt(txtDoorUmpStudAge.getText()), Double.parseDouble(txtDonorUmpStudTotalBlood.getText()));
-            //donor[i] = new DonorUmpStudent(txtDonorUmpStudID.getText(), txtDonorUmpStudName.getText(), gender, Integer.parseInt(txtDoorUmpStudAge.getText()), Double.parseDouble(txtDonorUmpStudTotalBlood.getText()));
+            
             campaign[(Integer.parseInt(txtDonorUmpStudCampaignNo.getText())) - 1].setDonor(donor[i]);
             donor[i].donateBlood(Double.parseDouble(txtDonorUmpStudDonateAmount.getText()), campaign[(Integer.parseInt(txtDonorUmpStudCampaignNo.getText())) - 1]);
 
