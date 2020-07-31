@@ -832,9 +832,7 @@ public class GUIOrg extends javax.swing.JFrame {
             String startDate=sdf.format(jDateChooser1.getDate());
             campaign[i] = new Campaign(txtCampaignName.getText(), startDate, txtCampainVenue.getText());
             organization.setCampaign(campaign[i]);
-//            String campaignDetailString = (countCampaign + 1) + ")" + " " + campaign[i].getCampaignName() + "   |   " + campaign[i].getCampaignStartDate() + "   |   " +
-//                    campaign[i].getCampaignVenue() + "   |   " + organization.getOrgnizationName() + "<BR>";
-//            campaignDetail += campaignDetailString;
+//          
             try {
                 myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/phase3", "root", "");
                 myStat = myConn.createStatement();
@@ -842,7 +840,7 @@ public class GUIOrg extends javax.swing.JFrame {
                 myStat.execute("SELECT * FROM `campaign`");
                 myStat.execute("INSERT INTO `campaign` (`campaignName`, `campaignStartDate`, `campaignVenue`, `campaignTotalDonatedBlood`, `orgName`) VALUES('" + campaign[i].getCampaignName() + "','" +
                         campaign[i].getCampaignStartDate() + "','" + campaign[i].getCampaignVenue() + "','" + campaign[i].getCampaignTotalDonatedBlood() + "','" + organization.getOrgnizationName() + "');");
-                //myRs = myStat.executeQuery("SELECT * FROM campaign INNER JOIN organization ON organization.orgName=campaign.orgName where id = '"+(i+1)+"'");
+                
                 myRs = myStat.executeQuery("SELECT * FROM campaign");
                 String campaignDetailString = "";
                 while (myRs.next()) {
