@@ -8,24 +8,24 @@ package phase3;
 /**
  * @author daus
  */
-public abstract class Donor implements Donate {
-    private String donorName, donorGender;
-    
-    private int donorAge;
-    private double donorTotalBlood, donorDonatedAmount;
+public class Donor{
+    private String donorIC, donorName, donorGender, donorBloodType;
+    private int donorAge, donorDonatedAmount;
   
 
-    public Donor(String donorName, String donorGender, int donorAge, double donorTotalBlood) {
+    public Donor(String donorIC, String donorName, String donorGender, String donorBloodType, int donorAge, int donorDonatedAmount) {
+        this.donorIC = donorIC;
         this.donorName = donorName;
         this.donorGender = donorGender;
         this.donorAge = donorAge;
-        this.donorTotalBlood = donorTotalBlood;
+        this.donorBloodType = donorBloodType;
+        this.donorDonatedAmount = donorDonatedAmount;
     }
 
-    public int getDonorAge() {
-        return donorAge;
+    public String getDonorIC() {
+        return donorIC;
     }
-
+    
     public String getDonorName() {
         return donorName;
     }
@@ -34,17 +34,19 @@ public abstract class Donor implements Donate {
         return donorGender;
     }
 
-    public double getDonorTotalBlood() {
-        return donorTotalBlood;
+    public String getDonorBloodType() {
+        return donorBloodType;
     }
-
-    public double getDonorDonatedAmount() {
+    
+    public int getDonorAge() {
+        return donorAge;
+    }
+    
+    public int getDonorDonatedAmount() {
         return donorDonatedAmount;
     }
 
-    public abstract String printMessage();
-
-    @Override
+    /*@Override
     public void donateBlood(double donateAmount, Campaign campaign) {
         if (donorTotalBlood - donateAmount <= 0) {
             System.out.println("Sorry you are not eligible to donate that much blood");
@@ -54,7 +56,7 @@ public abstract class Donor implements Donate {
             campaign.addTotalDonatedBlood(donateAmount);
         }
 
-    }
+    }*/
 
 
 }
