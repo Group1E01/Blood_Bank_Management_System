@@ -7,7 +7,7 @@ package phase3;
 
 /**
  *
- * @author daus
+ * @author Group 1E
  */
 public class Campaign {
 

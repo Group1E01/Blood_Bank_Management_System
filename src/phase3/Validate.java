@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author user
+ * @author Group 1E
  */
 class Validate {
     public static boolean validateEmail(String email) {                           

@@ -7,7 +7,7 @@ package phase3;
 
 /**
  *
- * @author daus
+ * @author Group 1E
  */
 public interface Donate {
     void donateBlood(double donateAmount, Campaign campaign);

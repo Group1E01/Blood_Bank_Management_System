@@ -6,7 +6,8 @@
 package phase3;
 
 /**
- * @author daus
+ *
+ * @author Group 1E
  */
 public abstract class Donor implements Donate {
     private String donorName, donorGender;
